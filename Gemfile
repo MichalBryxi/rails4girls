@@ -43,3 +43,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'simple_form', git: 'https://github.com/plataformatec/simple_form', tag: 'v3.1.0.rc1'
