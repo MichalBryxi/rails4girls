@@ -5,7 +5,7 @@ describe "users/edit", :type => :view do
     @user = assign(:user, User.create!(
       :first_name => "MyString",
       :last_name => "MyString",
-      :age => 1,
+      :age => 20,
       :active => false
     ))
   end

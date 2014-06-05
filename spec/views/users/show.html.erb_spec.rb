@@ -5,7 +5,7 @@ describe "users/show", :type => :view do
     @user = assign(:user, User.create!(
       :first_name => "First Name",
       :last_name => "Last Name",
-      :age => 1,
+      :age => 20,
       :active => false
     ))
   end
