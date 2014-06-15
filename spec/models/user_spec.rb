@@ -7,6 +7,14 @@ describe User, :type => :model do
   it { should respond_to(:active) }
   it { should respond_to(:email) }
 
+  it "should has_many to posts" do
+    user = FactoryGirl.create(:user)
+    post1 = FactoryGirl.create(:post, user: user)
+    post2 = FactoryGirl.create(:post, user: user)
+    post3 = FactoryGirl.create(:post, user: user)
+    expect(user.posts.size).to be(3)
+  end
+
   context 'when creating new record' do
     it "should check length (3 - 15) on first_name" do
       expect(User.new(first_name: 'Jo', last_name: "Doe", email: 'john.doe@example.com', age: 20)).not_to be_valid
