@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   validates :last_name, length: { minimum: 3 }
   validates :age, :inclusion => 13..99
   validates :email, uniqueness: true
+
+  has_many :posts
 end
